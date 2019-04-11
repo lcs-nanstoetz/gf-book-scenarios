@@ -13,31 +13,46 @@ public class Piano extends World
      * (we can use these variables anywhere in the class)
      */
     int frames;
-    
+
     //create the array (list of name)
     String[] peopleInClass = {"Julio", "Liam", "Dima", "Simon", "Osman", 
-        "Nick", "Eric", "Phillip", "Joven", "Joe", "Gordon", "Selena",
-        "Jason", "Sam", "Jeff"};
-    
+            "Nick", "Eric", "Phillip", "Joven", "Joe", "Gordon","Jieun", "Selena",
+            "Jason", "Sam", "Jeff"};
+
     /**
      * Make the piano.
      */
     public Piano() 
     {
         super(800, 340, 1);
-        
+
         //Initailize the instance variable
         frames = 0;
     }
+
     /**
      * act 
      * (gets called repeatedly to create animation)
      */
     public void act()
     {
+        //say hello to a different person each second
+        if (frames % 60 == 0)
+        {
+            //Only show a message when we are in the bounds of array
+            showText("Array index is:" + frames / 60, 400, 250);
+
+            //only say hello when we are in the bounds of the array 
+            if (frames / 60 < 16)
+            {
+                //say hello to everyone in the class
+                showText("Hello " + peopleInClass[frames / 60],400, 170);
+            }
+        }
+
         //track frames
         frames += 1;
-        
+
         //show the frames
         showText(""+ frames, 100, 100);
     }
