@@ -14,8 +14,10 @@ public class Piano extends World
      */
     int frames;
     
-    
-    
+    //create the array (list of name)
+    String[] peopleInClass = {"Julio", "Liam", "Dima", "Simon", "Osman", 
+        "Nick", "Eric", "Phillip", "Joven", "Joe", "Gordon", "Selena",
+        "Jason", "Sam", "Jeff"};
     
     /**
      * Make the piano.
@@ -24,7 +26,7 @@ public class Piano extends World
     {
         super(800, 340, 1);
         
-        
+        //Initailize the instance variable
         frames = 0;
     }
     /**
