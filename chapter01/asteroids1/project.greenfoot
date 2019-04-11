@@ -109,5 +109,6 @@ target7.x=200
 target7.y=130
 version=3.0.0
 width=1006
+world.lastInstantiated=Space
 xPosition=16
 yPosition=73
