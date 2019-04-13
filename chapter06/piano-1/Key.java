@@ -18,11 +18,12 @@ public class Key extends Actor
         if ( Greenfoot.isKeyDown("g") )
         {
             setImage("white-key-down.png");
+            play();
         }
         else
         {
             //key is up
-            setImage("white-key");
+            setImage("white-key.png");
         }
         
     }
