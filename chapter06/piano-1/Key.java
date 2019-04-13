@@ -23,19 +23,18 @@ public class Key extends Actor
     public void act()
     {
         // Animate the piano key being pressed
-        // Condtion 1 - is the g key already pressed 
-        //condition 2 - was the ge key already down
+        // Condtion 1 - is the "g" key already pressed 
+        //condition 2 - was the key was not already down
         if ( Greenfoot.isKeyDown("g") && keyAlreadyDown == false)
         {
             setImage("white-key-down.png");
             play();
             keyAlreadyDown = true;
         }
-
         
         //stay the key being pressed 
         //Condition 1 - The key was down the last time act() fired
-        //Condition 2 - 
+        //Condition 2 - the "g" has been released (no longer being pressed)
         if ((keyAlreadyDown == true)&& (Greenfoot.isKeyDown("g") == false))
         {
             //key is up
