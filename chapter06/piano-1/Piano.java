@@ -9,16 +9,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
 public class Piano extends World
 {
     /**
-     * instance variables
+     * Instance variables
      * (we can use these variables anywhere in the class)
      */
     int frames;
 
-    //create the array (list of name)
-    String[] peopleInClass = {"Julio", "Liam", "Dima", "Simon", "Osman", 
-            "Nick", "Eric", "Phillip", "Joven", "Joe", "Gordon","Jieun", "Selena",
-            "Jason", "Sam", "Jeff"};
-
+    // Create the array (list of names)
+    String[] peopleInClass = {"Julio", "Liam", "Dima", "Osman", "Nick", "Simon", "Eric", "Phillip", 
+            "Joven", "Joe", "Gordon", "Jieun", "Selena", "Jason", "Sam", "Jeff"
+        };
+        
+        String[]whiteKeys = {"a", "s", "d","f","g", "h", "j", "k", " l", ";", "'", "\\"};
+        
+        String[]whiteNotes = {"3c", "3d", "3e", "3f", "3g", "3a", "3b", "4c", "4d", "4e", "4f", "4g"}; 
+        
     /**
      * Make the piano.
      */
@@ -26,31 +30,37 @@ public class Piano extends World
     {
         super(800, 340, 1);
 
-        //Initailize the instance variable
+        // Initialize instance variables
         frames = 0;
     }
 
     /**
-     * act 
+     * act
      * (gets called repeatedly to create animation)
      */
     public void act()
     {
-        //say hello to a different person each second
-        if ( (frames % 60 == 0) && (frames / 60 < 16) )
+        // This block of code runs once per second until the end of the
+        // array
+        int position = frames / 60;
+        if ( (frames % 60 == 0) && (frames / 60 < 15) )
         {
-            //Only show a message when we are in the bounds of array
-            //showText("Array index is:" + frames / 60, 400, 250);
+            // Only show a message when we are in the bounds of the array
+            // showText("Array index is: " + frames / 60, 400, 250);
 
-            //only say hello when we are in the bounds of the array 
-            //say hello to everyone in the class
-            //showText("Hello " + peopleInClass[frames / 60],400, 170);
+            // Only say hello when we are in the bounds of the array
+            // Say hello to everyone in the class! 
+            // showText("Hello " + peopleInClass[frames / 60], 400, 170);
+
         }
 
-        //track frames
+        // Track frames
         frames += 1;
 
-        //show the frames
-        showText(""+ frames, 100, 100);
+        // Show the frames
+        // showText("" + frames, 100, 100);
     }
+
 }
+
+
