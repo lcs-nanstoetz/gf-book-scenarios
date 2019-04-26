@@ -11,19 +11,20 @@ public class Key extends Actor
     // Will contain the key and sound file that this instance of the class will play
     private String key;
     private String sound;
+    private String keyWhite;
     
     /**
      * Create a new key.
      * Constuctor – it runs once when a Key object is created.
      */
-    public Key(String keyName, String soundFile)
+    public Key(String keyName, String soundFile, boolean isKeyWhite)
     {
         // No key has been pressed
-        keyAlreadyDown = false;
-        
+        keyAlreadyDown = false;        
         // Set the instance variables using the parameters
         key = keyName;
         sound = soundFile;
+        keyWhite = isKeyWhite;
     }
 
     /**
@@ -51,7 +52,9 @@ public class Key extends Actor
             setImage("white-key.png");
             keyAlreadyDown = false;
         }
-        
+        else 
+        {
+        }
     }
 
     /**
